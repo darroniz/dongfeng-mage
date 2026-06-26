@@ -121,74 +121,44 @@
       </div>
     </section>
 
-    <!-- 4. DUAL-MODE — "Dos coches en uno" (interactivo) -->
-    <section id="modos" class="dualmode">
+    <!-- 4. DUAL-MODE — "Dos coches en uno" (split tipo Two-Face, ambos modos a la vez) -->
+    <section id="modos" class="twoface">
       <div class="container">
-        <header class="section-head" style="max-width:760px">
-          <p class="eyebrow">Híbrido enchufable</p>
-          <h2 class="section-title">Dos coches en uno. <em>Tú eliges cuál usas hoy.</em></h2>
-          <p class="section-sub">Entre semana, un eléctrico silencioso y a coste de enchufe. El finde, un coche de viaje que no se detiene a cargar. El MAGE cambia de modo solo; tú solo conduces.</p>
+        <header class="section-head" style="max-width:760px;text-align:center;margin-inline:auto">
+          <p class="eyebrow" style="justify-content:center">Híbrido enchufable</p>
+          <h2 class="section-title">Dos coches en uno. <em>El mismo MAGE.</em></h2>
+          <p class="section-sub" style="margin-inline:auto">Entre semana, un eléctrico silencioso y a coste de enchufe. El finde, un coche de viaje que no se detiene a cargar. No eliges modo: el MAGE cambia solo según lo que necesitas.</p>
         </header>
 
-        <div class="dualmode__switch" role="tablist" aria-label="Modo de conducción">
-          <button class="dualmode__tab is-active" role="tab" aria-selected="true" data-mode="0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
-            Modo eléctrico
-          </button>
-          <button class="dualmode__tab" role="tab" aria-selected="false" data-mode="1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17H4V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v9Z"/><path d="M14 9h3l3 3v5h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
-            Modo viaje
-          </button>
-        </div>
+        <div class="twoface__stage">
+          <img class="twoface__car" src="assets/hero-mage.webp" alt="Dongfeng MAGE PHEV" width="1500" height="680" loading="lazy">
+          <span class="twoface__divide" aria-hidden="true">
+            <span class="twoface__divide-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l-4 5 4 5M3 12h8M17 7l4 5-4 5M21 12h-8"/></svg>
+            </span>
+          </span>
 
-        <div class="dualmode__panels">
-          <!-- Panel EV -->
-          <article class="dualmode__panel is-active" data-mode="0">
-            <div class="dualmode__copy">
-              <span class="dualmode__big">120 km</span>
-              <span class="dualmode__big-label">en 100% eléctrico, cero gasolina</span>
-              <p>Trabajo, cole, recados, el gimnasio. La mayoría de los días no harás ni 60&nbsp;km: con el MAGE los haces <strong>en eléctrico puro</strong> y cargas en casa por la noche. Sin ruido, sin emisiones, sin pasar por la gasolinera.</p>
-              <ul class="dualmode__list">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2–3&nbsp;€ recargar la batería en tarifa nocturna</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Etiqueta CERO prevista*: acceso libre a las ZBE</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Silencio y empuje inmediato del motor eléctrico</li>
-              </ul>
-            </div>
-            <div class="dualmode__viz dualmode__viz--ev" aria-hidden="true">
-              <div class="dualmode__gauge">
-                <span class="dualmode__gauge-ico">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M18 10h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2"/><path d="M6 11l-1.5 3H8l-1.5 3"/></svg>
-                </span>
-                <div class="dualmode__bar"><span class="dualmode__bar-fill dualmode__bar-fill--full"></span></div>
-                <div class="dualmode__gauge-foot"><span>Batería</span><span>100%</span></div>
-              </div>
-              <p class="dualmode__viz-note">Tu rutina diaria, resuelta a coste de electricidad.</p>
-            </div>
-          </article>
+          <div class="twoface__side twoface__side--ev">
+            <span class="twoface__tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg> Entre semana</span>
+            <span class="twoface__big">120 km</span>
+            <span class="twoface__sub">100% eléctrico · 0 gasolina</span>
+            <ul class="twoface__list">
+              <li>Tu día a día por 2–3&nbsp;€ de carga nocturna</li>
+              <li>Etiqueta CERO prevista*: acceso libre a las ZBE</li>
+              <li>Silencio total y empuje inmediato</li>
+            </ul>
+          </div>
 
-          <!-- Panel Viaje -->
-          <article class="dualmode__panel" data-mode="1">
-            <div class="dualmode__copy">
-              <span class="dualmode__big">+1.000 km</span>
-              <span class="dualmode__big-label">de un tirón, sin pensar en enchufes</span>
-              <p>¿Puente, vacaciones, una ruta larga? Cuando la batería se agota, el <strong>motor 1.5T de gasolina toma el relevo</strong> automáticamente. Repostas en cualquier estación, en cinco minutos, y sigues. La autonomía y la tranquilidad de siempre.</p>
-              <ul class="dualmode__list">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cambio de modo automático: tú no haces nada</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>204&nbsp;CV combinados · sistema híbrido DHT</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cero paradas de carga en mitad del viaje</li>
-              </ul>
-            </div>
-            <div class="dualmode__viz dualmode__viz--trip" aria-hidden="true">
-              <div class="dualmode__gauge">
-                <span class="dualmode__gauge-ico">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V8a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v14"/><path d="M14 12h3l3 3v6M2 22h14M19 22h3"/><path d="M6 11h5"/></svg>
-                </span>
-                <div class="dualmode__bar"><span class="dualmode__bar-fill dualmode__bar-fill--trip"></span></div>
-                <div class="dualmode__gauge-foot"><span>Eléctrico + gasolina</span><span>+1.000 km</span></div>
-              </div>
-              <p class="dualmode__viz-note">Sales por la mañana y llegas sin una sola parada de carga.</p>
-            </div>
-          </article>
+          <div class="twoface__side twoface__side--fuel">
+            <span class="twoface__tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17H4V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v9Z"/><path d="M14 9h3l3 3v5h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> El finde</span>
+            <span class="twoface__big">+1.000 km</span>
+            <span class="twoface__sub">la gasolina toma el relevo, sola</span>
+            <ul class="twoface__list">
+              <li>Cambio de modo automático: tú no haces nada</li>
+              <li>204&nbsp;CV combinados · sistema híbrido DHT</li>
+              <li>Cero paradas de carga en pleno viaje</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -198,19 +168,35 @@
       <div class="container">
         <header class="range__head">
           <p class="eyebrow" style="justify-content:center">Autonomía total</p>
-          <h2 class="section-title">Madrid&ndash;Málaga y vuelta. <em>Sin repostar.</em></h2>
+          <h2 class="section-title">Madrid&ndash;Málaga ida y vuelta. <em>Sin repostar.</em></h2>
           <p class="section-sub" style="margin-inline:auto;text-align:center">120&nbsp;km eléctricos para empezar y más de 1.000&nbsp;km combinando ambos sistemas. La cuenta no sale en ningún rival a este precio.</p>
         </header>
 
-        <div class="range__bar-wrap" id="rangeBar">
-          <div class="range__bar">
-            <span class="range__seg range__seg--ev"><span class="range__seg-label">120 km eléctricos</span></span>
-            <span class="range__seg range__seg--fuel"><span class="range__seg-label">Gasolina hasta +1.000 km</span></span>
-          </div>
-          <div class="range__scale">
-            <span class="range__pin range__pin--start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg>Sales de casa</span>
-            <span class="range__pin range__pin--end"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 19-8-8 19-2-8-9-3Z"/></svg>+1.000 km después</span>
-          </div>
+        <div class="route" id="rangeBar">
+          <svg class="route__map" viewBox="0 0 760 240" role="img" aria-label="Ruta Madrid-Málaga ida y vuelta, más de 1.000 km sin repostar">
+            <!-- ruta ida -->
+            <path class="route__line route__line--go" d="M150 78 C 300 60, 360 150, 600 168"/>
+            <!-- ruta vuelta (punteada) -->
+            <path class="route__line route__line--back" d="M600 168 C 380 188, 300 96, 150 100" stroke-dasharray="2 9"/>
+            <!-- coche en ruta -->
+            <g class="route__car" transform="translate(372 132)">
+              <circle r="17" fill="#C39B40" opacity=".18"/>
+              <g transform="translate(-9 -9)" fill="none" stroke="#DCBC72" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 13h14M3 13l1.4-4A2 2 0 0 1 6.3 8h5.4a2 2 0 0 1 1.9 1L15 13"/><circle cx="6" cy="14.5" r="1.6"/><circle cx="12" cy="14.5" r="1.6"/>
+              </g>
+            </g>
+            <!-- pin Madrid -->
+            <g class="route__pin" transform="translate(150 78)">
+              <circle r="7" class="route__dot route__dot--start"/>
+              <text x="0" y="-16" text-anchor="middle">Madrid</text>
+            </g>
+            <!-- pin Málaga -->
+            <g class="route__pin" transform="translate(600 168)">
+              <circle r="7" class="route__dot route__dot--end"/>
+              <text x="0" y="30" text-anchor="middle">Málaga</text>
+            </g>
+          </svg>
+          <p class="route__foot"><strong>Ida y vuelta sin pasar por una gasolinera.</strong> Y aún te sobra batería para moverte por la ciudad toda la semana. Lo mismo de Sevilla a Madrid, de Valencia a Bilbao o de Barcelona a San&nbsp;Sebastián.</p>
         </div>
 
         <dl class="range__cards">
@@ -273,10 +259,10 @@
         <div class="hotspots" id="hotspots">
           <div class="hotspots__stage" id="hsStage">
             <img src="assets/interior-mage.webp" alt="Salpicadero del Dongfeng MAGE con pantalla de 14,6 pulgadas" width="1900" height="1069">
-            <button class="hotspot is-active" style="left:50%;top:42%" data-index="0" aria-label="Pantalla central"><span></span></button>
-            <button class="hotspot" style="left:22%;top:34%" data-index="1" aria-label="HUD"><span></span></button>
-            <button class="hotspot" style="left:74%;top:58%" data-index="2" aria-label="ADAS Nivel 2"><span></span></button>
-            <button class="hotspot" style="left:50%;top:74%" data-index="3" aria-label="Cámara 360"><span></span></button>
+            <button class="hotspot is-active" style="left:50%;top:53%" data-index="0" aria-label="Pantalla central"><span></span></button>
+            <button class="hotspot" style="left:37%;top:22%" data-index="1" aria-label="HUD"><span></span></button>
+            <button class="hotspot" style="left:31%;top:50%" data-index="2" aria-label="ADAS Nivel 2"><span></span></button>
+            <button class="hotspot" style="left:85%;top:29%" data-index="3" aria-label="Cámara 360"><span></span></button>
             <div class="hotspots__pop" id="hsPop" role="status" aria-live="polite">
               <h3 id="hsTitle">Pantalla cascada de 14,6"</h3>
               <p id="hsText">Una pantalla táctil vertical de alta resolución que reúne navegación, multimedia y clima. Lo que buscas, siempre a la vista.</p>
