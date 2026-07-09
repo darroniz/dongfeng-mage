@@ -70,13 +70,16 @@
   /* ----------  FORM SUBMIT  ----------
      Puerta de entrada (Apps Script): valida el lead y, solo si pasa el filtro
      antibots, lo escribe en la Sheet y lo reenvía a Zapier (server-side).
-     ⚠️ Pendiente go-live: estos códigos se heredan del BOX (Model_Code 819,
-     Campaign_Code CPH020, FORM_TOKEN, gateway). El DISTRIBUIDOR del MAGE sí es
-     Salvador Caetano (confirmado en brief), por lo que el mapa de dealers por CP
-     es válido. Sustituir Model_Code / Campaign_Code / gateway por los del MAGE
-     cuando el cliente los facilite. */
-  const GATEWAY_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzrS__THM2OPA35AQlrS5Hn3gObNEPRU_kiHQWAtGefzRJM5JzuDxK1e5lLGu4jPMHG/exec';
-  const FORM_TOKEN = 'dfbox-a7f3k92mq';
+     Códigos CRM del MAGE confirmados (08-jul-2026): Model_Code 821,
+     Campaign_Code CPH020 (común Dongfeng), FORM_TOKEN dfmage-* propio. El
+     DISTRIBUIDOR del MAGE es Salvador Caetano (confirmado en brief), por lo que
+     el mapa de dealers por CP es válido. Pendiente go-live: pegar la URL /exec
+     del gateway propio del MAGE (ver TODO deploy abajo). */
+  // Gateway propio del MAGE (Apps Script → Sheet "Leads Dongfeng Mage").
+  // TODO deploy: pegar aquí la URL /exec del Web App tras desplegar
+  // gateway/apps-script-gateway.gs. Vacío = el lead NO se envía (solo dataLayer).
+  const GATEWAY_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyBjEr5jAxKusK0B0Wr9dqmxxa-C-q67uvr5P1XlM5PjmpL0Ff2ysT-nYi8wDcKwkczAA/exec';
+  const FORM_TOKEN = 'dfmage-p8w4n62rk';
 
   function splitName(fullName) {
     const parts = (fullName || '').trim().split(/\s+/);
@@ -121,7 +124,7 @@
       Last_Name: last_name,
       Email: email || '',
       Phone: phone,
-      Model_Code: '819',           // TODO MAGE: sustituir por el Model_Code del MAGE
+      Model_Code: '821',           // Dongfeng MAGE PHEV (confirmado 08-jul-2026)
       Dealership_Code: dealer || '',
       Postal_Code: cp || '',
       Privacy_Policy: 'Y',
@@ -130,7 +133,7 @@
       Request_Type: 'TPD10',
       Lead_Source: 'OL24',
       Form_Type: 'F12',
-      Campaign_Code: 'CPH020',     // TODO MAGE: sustituir por el Campaign_Code del MAGE
+      Campaign_Code: 'CPH020',     // confirmado 08-jul-2026 (común Dongfeng)
       Brand_Code: 'DON',
       Country_Code: 'ES',
       Region: REGION
