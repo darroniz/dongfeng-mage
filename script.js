@@ -182,6 +182,9 @@
         }
       });
 
+      // GA4 propio (PARETO-EXPERTIA): evento de conversión a nuestra propiedad.
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { currency: 'EUR', value: 1.0, model: 'MAGE', dealer, send_to: 'G-09DHFTHCST' });
+
       try { sessionStorage.setItem(LEAD_SENT_KEY, '1'); } catch {}
       showView('success');
     });
