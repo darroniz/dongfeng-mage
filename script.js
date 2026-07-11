@@ -158,12 +158,13 @@
     leadForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(leadForm).entries());
-      const { first, last } = splitName(data.name);
+      const { first, last } = splitName(data.name);   // split solo para Enhanced Conversions
+      const fullName = (data.name || '').trim();       // CRM: nombre+apellidos completo → Last_Name
       const phone = normalizePhoneES(data.phone);
       const cp = (data.cp || '').replace(/\D/g, '');
       const dealer = dealerCodeFromCP(cp);
 
-      const payload = buildPayload({ name: first, last_name: last, phone, cp, email: data.email || '', dealer });
+      const payload = buildPayload({ name: '', last_name: fullName, phone, cp, email: data.email || '', dealer });
       payload._t = FORM_TOKEN;
       payload._hp = data.fax || '';
 
