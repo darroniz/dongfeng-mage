@@ -71,9 +71,9 @@
      Puerta de entrada (Apps Script): valida el lead y, solo si pasa el filtro
      antibots, lo escribe en la Sheet y lo reenvía a Zapier (server-side).
      Códigos CRM del MAGE confirmados (08-jul-2026): Model_Code 821,
-     Campaign_Code CPH020 (común Dongfeng), FORM_TOKEN dfmage-* propio. El
-     DISTRIBUIDOR del MAGE es Salvador Caetano (confirmado en brief), por lo que
-     el mapa de dealers por CP es válido. Pendiente go-live: pegar la URL /exec
+     Campaign_Code CPH020 (común Dongfeng), FORM_TOKEN dfmage-* propio. El MAGE
+     comparte la red oficial de concesionarios del BOX, por lo que el mapa de
+     dealers por CP es válido. Pendiente go-live: pegar la URL /exec
      del gateway propio del MAGE (ver TODO deploy abajo). */
   // Gateway propio del MAGE (Apps Script → Sheet "Leads Dongfeng Mage").
   // TODO deploy: pegar aquí la URL /exec del Web App tras desplegar
@@ -96,7 +96,7 @@
     return p;
   }
 
-  // CP español → código de concesionario Salvador Caetano (distribuidor del MAGE).
+  // CP español → código de concesionario oficial.
   function dealerCodeFromCP(cp) {
     const digits = (cp || '').replace(/\D/g, '');
     if (digits.length < 2) return '';
