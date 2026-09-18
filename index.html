@@ -455,9 +455,34 @@
             <label for="f-phone">Teléfono</label>
             <input type="tel" id="f-phone" name="phone" placeholder="Ej: 612 345 678" required autocomplete="tel" inputmode="tel" pattern="(\+?34[\s.\-]?)?[6789]\d{2}[\s.\-]?\d{3}[\s.\-]?\d{3}" title="Introduce un número español de 9 dígitos (ej: 612 345 678)">
           </div>
-          <div class="field field--cp">
-            <label for="f-cp">Código postal</label>
-            <input type="text" id="f-cp" name="cp" placeholder="Ej: 28001" required pattern="[0-9]{5}" maxlength="5" inputmode="numeric" autocomplete="postal-code" title="Introduce un código postal español de 5 dígitos">
+          <div class="field">
+            <label for="f-dealer">Concesionario Dongfeng</label>
+            <select id="f-dealer" name="dealer" required>
+              <option value="" disabled selected>Elige tu concesionario más cercano</option>
+              <option value="DE00110012">A Coruña · Caetano Force</option>
+              <option value="DE00160001">Alcalá de Henares · Dongfeng Chinares</option>
+              <option value="DE00110011">Alicante · Dongfeng Grupo Huertas</option>
+              <option value="DE00090004">Almería · Dongfeng Indalo</option>
+              <option value="DE01100014">Barakaldo · Dongfeng Blendio</option>
+              <option value="DE06350009">Gandía · Dongfeng Moll</option>
+              <option value="DE00180001">Girona · Dongfeng Texauto</option>
+              <option value="DE07000012">Granada · Dongfeng Overland</option>
+              <option value="DE00780003">Las Palmas de Gran Canaria · Dongfeng Pelican Motor</option>
+              <option value="DE00110002">Leganés · Dongfeng Grupo Cars</option>
+              <option value="DE00110007">Majadahonda · Caetano Force</option>
+              <option value="DE01050013">Málaga · Caetano Force</option>
+              <option value="DE00200001">Manresa · Dongfeng Full Traction</option>
+              <option value="DE00840005">Mérida · Dongfeng X-Space Maven</option>
+              <option value="DE00070002">Murcia · Dongfeng Grupo Huertas</option>
+              <option value="DE00150001">Noáin (Navarra) · Dongfeng Grupo Torregrosa</option>
+              <option value="DE00110005">Oviedo (Colloto) · Dongfeng Blendio</option>
+              <option value="DE00140001">Reus (Tarragona) · Dongfeng Nima Grup</option>
+              <option value="DE00070001">Santander · Dongfeng Blendio</option>
+              <option value="DE00110001">Sevilla · Caetano Force</option>
+              <option value="DE00090002">Tenerife · Dongfeng Pelican Motor</option>
+              <option value="DE00090001">Valladolid · Dongfeng Autocyl</option>
+              <option value="DE00100004">Zaragoza · Dongfeng Grupo Ágreda</option>
+            </select>
           </div>
           <div class="field">
             <label for="f-email">Email <span class="field__optional">(opcional, te enviamos tu oferta)</span></label>
