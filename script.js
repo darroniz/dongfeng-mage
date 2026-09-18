@@ -166,7 +166,7 @@
 
       const payload = buildPayload({ name: '', last_name: fullName, phone, cp, email: data.email || '', dealer });
       payload._t = FORM_TOKEN;
-      payload._hp = data.fax || '';
+      payload._hp = data.hp_ref || '';   // campo trampa: nombre que el autocompletado no reconoce (antes «fax», que se rellenaba con el teléfono)
 
       sendToGateway(payload);
 
