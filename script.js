@@ -250,7 +250,7 @@
     { title: 'Pantalla cascada de 14,6"', text: 'Una pantalla táctil vertical de alta resolución que reúne navegación, multimedia y clima. Compatible con Apple CarPlay y Android Auto.' },
     { title: 'Head-Up Display', text: 'La información clave —velocidad, navegación, asistencias— proyectada sobre el parabrisas. No apartas la vista de la carretera.' },
     { title: 'ADAS Nivel 2', text: 'Conducción asistida de nivel 2: control de crucero adaptativo, mantenimiento de carril y frenada de emergencia trabajando juntos en autopista.' },
-    { title: 'Cámara 360°', text: 'Vista cenital de 360° alrededor del coche para aparcar en el hueco más justo sin un roce.' }
+    { title: 'Cámara 540°', text: 'Vista de 540° alrededor del coche para aparcar en el hueco más justo sin un roce.' }
   ];
   const hsStage = $('#hsStage'), hsPop = $('#hsPop'), hsTitle = $('#hsTitle'), hsText = $('#hsText');
   const dots = $$('.hotspot'), hsTabs = $$('.hotspots__nav button');
