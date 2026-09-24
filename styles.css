@@ -1243,6 +1243,8 @@ main > section { padding-block: clamp(var(--s-8), 6vw, var(--s-10)); }
 .site-footer__inner { display: flex; flex-direction: column; gap: var(--s-3); }
 .site-footer__legal a { color: rgba(255,255,255,.75); border-bottom: 1px solid rgba(255,255,255,.2); }
 .site-footer__finance { font-size: 12px; color: rgba(255,255,255,.62); max-width: 72ch; }
+.site-footer__finance strong { font-weight: 700; color: rgba(255,255,255,.82); }
+.site-footer__finance u { text-decoration: underline; text-underline-offset: 2px; }
 
 /* ============================================================
                       STICKY CTA (mobile)
